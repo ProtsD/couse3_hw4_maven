@@ -1,6 +1,7 @@
-package model;
+package hw5_hibernate.model;
 
 import lombok.*;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
