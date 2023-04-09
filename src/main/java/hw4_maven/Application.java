@@ -1,6 +1,8 @@
-import model.City;
-import model.Employee;
-import service.EmployeeDAOImpl;
+package hw4_maven;
+
+import hw4_maven.model.Employee;
+import hw4_maven.model.City;
+import hw4_maven.service.EmployeeDAOImpl;
 
 import java.sql.*;
 
