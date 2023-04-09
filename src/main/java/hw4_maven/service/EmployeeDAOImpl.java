@@ -1,7 +1,7 @@
-package service;
+package hw4_maven.service;
 
-import model.City;
-import model.Employee;
+import hw4_maven.model.Employee;
+import hw4_maven.model.City;
 
 import java.sql.*;
 import java.util.ArrayList;

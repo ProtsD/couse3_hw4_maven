@@ -23,6 +23,9 @@ public class Application {
         employeeDAOImpl.updateEmployee(17, new Employee("Max4", "Sidorov1", "male", 22, 1), entityManager);
         employeeDAOImpl.add(new Employee("Max5", "Sidorov1", "male", 22, 2), entityManager);
         System.out.println(employeeDAOImpl.getById(55, entityManager));
+        System.out.println("****************************");
+        employeeDAOImpl.updateEmployee(1,new Employee("Max51", "Sidorov1", "male", 22, 2), entityManager);
+        System.out.println("****************************");
 
         entityManager.close();
         entityManagerFactory.close();

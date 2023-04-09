@@ -1,7 +1,6 @@
-package service;
+package hw4_maven.service;
 
-import model.Employee;
-
+import hw4_maven.model.Employee;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;

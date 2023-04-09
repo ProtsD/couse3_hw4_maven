@@ -34,4 +34,12 @@ public class Employee {
         this.age = age;
         this.city = city;
     }
+    public Employee(int id, String firstName, String secondName, String gender, int age, int city) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.gender = gender;
+        this.age = age;
+        this.city = city;
+        this.id = id;
+    }
 }

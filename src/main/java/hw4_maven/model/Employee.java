@@ -1,4 +1,4 @@
-package model;
+package hw4_maven.model;
 
 import lombok.*;
 @NoArgsConstructor
