@@ -1,4 +1,4 @@
-package hw5_hibernate.model;
+package hw6_hibernate_several_tables.model;
 
 import lombok.*;
 

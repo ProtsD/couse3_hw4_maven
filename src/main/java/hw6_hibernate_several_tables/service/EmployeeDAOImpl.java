@@ -1,25 +1,26 @@
-package hw5_hibernate.service;
+package hw6_hibernate_several_tables.service;
 
-import hw5_hibernate.model.Employee1;
+import hw6_hibernate_several_tables.model.Employee;
+
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
     @Override
-    public void add(Employee1 employee, EntityManager entityManager) {
+    public void add(Employee employee, EntityManager entityManager) {
         entityManager.getTransaction().begin();
         entityManager.persist(employee);
         entityManager.getTransaction().commit();
     }
 
     @Override
-    public Employee1 getById(int id, EntityManager entityManager) {
-        return entityManager.find(Employee1.class, id);
+    public Employee getById(int id, EntityManager entityManager) {
+        return entityManager.find(Employee.class, id);
     }
 
     @Override
-    public void updateEmployee(int id, Employee1 employee, EntityManager entityManager) {
+    public void updateEmployee(int id, Employee employee, EntityManager entityManager) {
         entityManager.getTransaction().begin();
         entityManager.merge(employee);
         entityManager.getTransaction().commit();
@@ -38,10 +39,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
     @Override
-    public List<Employee1> getAllEmployee(EntityManager entityManager) {
-        String jpqlQuery = "SELECT s FROM Employee1 s";
-        TypedQuery<Employee1> query = entityManager.createQuery(jpqlQuery, Employee1.class);
-        List<Employee1> employees = query.getResultList();
+    public List<Employee> getAllEmployee(EntityManager entityManager) {
+        String jpqlQuery = "SELECT s FROM Employee s";
+        TypedQuery<Employee> query = entityManager.createQuery(jpqlQuery, Employee.class);
+        List<Employee> employees = query.getResultList();
         return employees;
     }
 }

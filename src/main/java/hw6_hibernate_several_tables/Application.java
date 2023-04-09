@@ -1,7 +1,7 @@
-package hw5_hibernate;
+package hw6_hibernate_several_tables;
 
-import hw5_hibernate.model.Employee1;
-import hw5_hibernate.service.EmployeeDAOImpl;
+import hw6_hibernate_several_tables.model.Employee;
+import hw6_hibernate_several_tables.service.EmployeeDAOImpl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -15,16 +15,16 @@ public class Application {
 
         EmployeeDAOImpl employeeDAOImpl = new EmployeeDAOImpl();
 
-        for (Employee1 employee : employeeDAOImpl.getAllEmployee(entityManager)) {
+        for (Employee employee : employeeDAOImpl.getAllEmployee(entityManager)) {
             System.out.println(employee);
         }
 
         employeeDAOImpl.deleteById(17, entityManager);
-        employeeDAOImpl.updateEmployee(17, new Employee1("Max4", "Sidorov1", "male", 22, 1), entityManager);
-        employeeDAOImpl.add(new Employee1("Max5", "Sidorov1", "male", 22, 2), entityManager);
+        employeeDAOImpl.updateEmployee(17, new Employee("Max4", "Sidorov1", "male", 22, 1), entityManager);
+        employeeDAOImpl.add(new Employee("Max5", "Sidorov1", "male", 22, 2), entityManager);
         System.out.println(employeeDAOImpl.getById(55, entityManager));
         System.out.println("****************************");
-        employeeDAOImpl.updateEmployee(1,new Employee1("Max51", "Sidorov1", "male", 22, 2), entityManager);
+        employeeDAOImpl.updateEmployee(1,new Employee("Max51", "Sidorov1", "male", 22, 2), entityManager);
         System.out.println("****************************");
 
         entityManager.close();
