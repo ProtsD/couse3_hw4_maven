@@ -24,17 +24,20 @@ public class Employee {
     private String gender;
     @Column(name = "age")
     private int age;
-    @Column(name = "city_id")
-    private int city;
 
-    public Employee(String firstName, String secondName, String gender, int age, int city) {
+    @ManyToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name = "city_id")
+    private City city;
+
+
+    public Employee(String firstName, String secondName, String gender, int age, City city) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.gender = gender;
         this.age = age;
         this.city = city;
     }
-    public Employee(int id, String firstName, String secondName, String gender, int age, int city) {
+    public Employee(int id, String firstName, String secondName, String gender, int age, City city) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.gender = gender;
