@@ -10,7 +10,7 @@ public interface EmployeeDAO {
 
     Employee getById(int id, EntityManager entityManager);
 
-    void updateEmployee(int id, Employee employee, EntityManager entityManager);
+    void updateEmployee(Employee employee, EntityManager entityManager);
 
     void deleteById(int id, EntityManager entityManager);
 
